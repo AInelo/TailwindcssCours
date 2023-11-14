@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acme Rockets</title>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -16,8 +19,27 @@
                 <a href="#hero"> 🚀 Acme Rockets</a>
             </h1>
             <div>
-                <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer">
-                    &#9776;
+                <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer
+                relative w-8 h-8">
+                    <!-- &#9776; -->
+                    <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500
+                    before:content-[''] before:bg-white
+                    before:w-8 before:h-1 
+                    before:rounded before:absolute
+                    before:-translate-x-4
+                    before:-translate-y-3
+                    before:transition-all
+                    before:duration-500
+                    
+                    after:content-[''] after:bg-white
+                    after:w-8 after:h-1 
+                    after:rounded after:absolute
+                    after:-translate-x-4
+                    after:translate-y-3
+                    after:transition-all
+                    after:duration-500"></div>
+
+
                 </button>
                 <nav class="hidden md:block space-x-8 text_xl" aria-label="main">
                     <a href="#rockets" class="hover:opacity-90">Nos Rockets</a>
@@ -27,12 +49,13 @@
             </div>
         </section>
 
-        <section id="mobile-menu" class="absolute top-0 bg-black w-full text-5xl flex flex-col justify-content-center">
+        <section id="mobile-menu"
+            class="absolute top-0 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
             <button class="text-8xl self-end px-6">
                 &times;
             </button>
 
-            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+            <nav class="flex flex-col min-h-screen items-center py-8 " aria-label="mobile">
                 <a href="#hero" class="w-full text-center py-6 hover-opacity-90">Home</a>
                 <a href="#rockets" class="w-full text-center py-6 hover-opacity-90">Our Rockets</a>
                 <a href="#testimonials" class="w-full text-center py-6 hover-opacity-90">Testimonials</a>
@@ -182,7 +205,7 @@
                     placeholder="Your subject" class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900
                     dark:border-none" />
                 <label for="message" class="">Message:</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message" required class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Your message" required class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900
                     dark:border-none"></textarea>
                 <button
                     class="bg-teal-700 hover:bg-teal-600 active:bg-teal-500 text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none">
